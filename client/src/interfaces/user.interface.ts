@@ -1,4 +1,4 @@
-interface User {
+export interface User {
     id: number;
     userInfos: {
         firstName: string;
@@ -14,7 +14,7 @@ interface User {
     }
 }
 
-interface UserActivity {
+export interface UserActivity {
     userId: number;
     sessions: {
         day: string;
@@ -23,7 +23,7 @@ interface UserActivity {
     }[]
 }
 
-interface UserAverageSession {
+export interface UserAverageSession {
     userId: number;
     sessions: {
         day: number;
@@ -31,7 +31,7 @@ interface UserAverageSession {
     }[]
 }
 
-interface UserPerformance {
+export interface UserPerformance {
     userId: number;
     kind: {
         1: 'cardio',
@@ -46,3 +46,5 @@ interface UserPerformance {
         kind: number;
     }[]
 }
+
+export type UserContext = [ activeUserId: number, setActiveUserId: React.Dispatch<React.SetStateAction<number>> ];

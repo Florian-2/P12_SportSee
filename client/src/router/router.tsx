@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { lazy } from 'react';
+import { getOneUser, getUsers } from './loaders/user.loader';
 
 import App from '../App';
 import Home from '../pages/Home/Home';
@@ -14,14 +15,20 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: getUsers,
                 element: <Home/>
             },
             {
-                path: '/profil',
+                path: '/profile/:id',
+                loader: getOneUser,
                 element: <Profile/>,
             },
             {
-                path: '/construction',
+                path: '/settings',
+                element: <Construction/>
+            },
+            {
+                path: '/community',
                 element: <Construction/>
             }
         ]

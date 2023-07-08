@@ -26,3 +26,7 @@ a {
 a.active {
     color: var(--color-primary);
 }
+
+code {
+    font-size: 2rem;
+}
