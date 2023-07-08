@@ -1,3 +1,5 @@
+import { User } from "../interfaces";
+
 const BASE_URL = "http://localhost:3000";
 
 export async function getAllUsers(): Promise<User[]> {
@@ -10,12 +12,23 @@ export async function getAllUsers(): Promise<User[]> {
     return res.json();
 }
 
-export async function getOneUserById(id: number | string): Promise<User> {
-    const res = await fetch(`${BASE_URL}/user/${id}`);
+export async function getOneUserById(id: number | string) {
+    const requests = [
+        fetch(`${BASE_URL}/user/${id}`),
+        fetch(`${BASE_URL}/user/${id}/activity`),
+        fetch(`${BASE_URL}/user/${id}/average-sessions`),
+        fetch(`${BASE_URL}/user/${id}/performance`),
+    ];
 
-    if (!res.ok) {
-        throw new Error("Utilisateur introuvable.");
+    const responses = await Promise.all(requests);
+
+    for (const res of responses) {
+        if (!res.ok) {
+            throw Error("Aucun utilisateur trouvé");
+        }
     }
 
-    return res.json();
+    const jsonPromises = responses.map((res) => res.json());
+
+    return Promise.all(jsonPromises);
 }

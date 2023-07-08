@@ -6,6 +6,7 @@ import App from '../App';
 import Home from '../pages/Home/Home';
 const Construction = lazy(() => import('../pages/Construction/Construction'));
 const Profile = lazy(() => import('../pages/Profile/Profile'));
+const NotFound = lazy(() => import('../components/NotFound/NotFound'));
 
 
 export const router = createBrowserRouter([
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
             {
                 path: '/community',
                 element: <Construction/>
+            },
+            {
+                path: "*",
+                element: <NotFound message='Page introuvable'/>
             }
         ]
     }
