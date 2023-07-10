@@ -3,8 +3,8 @@ import { Outlet, useLocation } from "react-router-dom";
 
 import { Header } from "./layouts/Header/Header";
 import { Aside } from "./layouts/Aside/Aside";
-import "./App.css";
 import { UserContext } from "./interfaces/user.interface";
+import "./App.css";
 
 
 function App() {

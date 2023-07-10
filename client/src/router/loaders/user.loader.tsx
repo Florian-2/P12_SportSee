@@ -11,5 +11,5 @@ export async function getUsers() {
 export async function getOneUser({ params }: LoaderFunctionArgs) {
     const res = params.id && getOneUserById(params.id);
 
-    return defer({ user: res });
+    return defer({ user: new Promise((resolve) => setTimeout(() => resolve(res), 8500)) });
 }

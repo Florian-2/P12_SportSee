@@ -4,6 +4,7 @@ import { UserCard } from './components/UserCard/UserCard';
 import { User } from '../../interfaces';
 
 import style from './home.module.css';
+import { Loading } from '../../components/Loading/Loading';
 
 
 function Home() {
@@ -11,7 +12,7 @@ function Home() {
 
     return (
         <>
-            <Suspense fallback={<h1>Chargement...</h1>}>
+            <Suspense fallback={<Loading/>}>
                 <Await resolve={users}>
                     { ({ data }) => (
                         <div className={style.container}>

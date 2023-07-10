@@ -4,6 +4,7 @@ import { User } from '../../interfaces';
 import NotFound from '../../components/NotFound/NotFound';
 
 import style from './profile.module.css';
+import { Loading } from '../../components/Loading/Loading';
 
 
 function Profile() {
@@ -11,7 +12,7 @@ function Profile() {
 
     return (
         <>
-            <Suspense fallback={<h1>Chargement...</h1>}>
+            <Suspense fallback={<Loading/>}>
                 <Await resolve={user} errorElement={<NotFound message='Aucun utilisateur trouvé'/>}>
                     { (data) => <code>{JSON.stringify(data)}</code> }
                 </Await>
