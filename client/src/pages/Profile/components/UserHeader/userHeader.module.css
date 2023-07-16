@@ -1,0 +1,19 @@
+.header {
+    grid-column: 1 / 5;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.title {
+    font-size: 4.5rem;
+}
+.name {
+    color: var(--color-primary);
+}
+
+.congrats {
+    font-size: 1.6rem;
+    font-weight: 500;
+}

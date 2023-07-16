@@ -5,6 +5,7 @@ import { Header } from "./layouts/Header/Header";
 import { Aside } from "./layouts/Aside/Aside";
 import { UserContext } from "./interfaces/user.interface";
 import "./App.css";
+import { Loading } from "./components/Loading/Loading";
 
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 				{ location.pathname !== "/" && <Aside/> }
 
 				<section>
-					<Suspense fallback={<h1>Chargement...</h1>}>
+					<Suspense fallback={<Loading/>}>
 						<Outlet context={[activeUserId, setActiveUserId] satisfies UserContext}/>
 					</Suspense>
 				</section>

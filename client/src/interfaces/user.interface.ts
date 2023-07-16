@@ -48,3 +48,10 @@ export interface UserPerformance {
 }
 
 export type UserContext = [ activeUserId: number, setActiveUserId: React.Dispatch<React.SetStateAction<number>> ];
+
+export type UserData = [
+    { data: User },
+    { data: UserActivity },
+    { data: UserAverageSession },
+    { data: UserPerformance },
+];

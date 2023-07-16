@@ -1,20 +1,29 @@
 import { Suspense } from 'react';
 import { Await, useLoaderData } from 'react-router-dom';
-import { User } from '../../interfaces';
+import { UserData } from '../../interfaces';
+
+import { Loading } from '../../components/Loading/Loading';
+import { UserHeader } from './components/UserHeader/UserHeader';
+import { Charts } from './components/Charts/Charts';
 import NotFound from '../../components/NotFound/NotFound';
 
 import style from './profile.module.css';
-import { Loading } from '../../components/Loading/Loading';
 
 
 function Profile() {
-    const { user } = useLoaderData() as { user: User, data: null };
+    const { user } = useLoaderData() as { user: UserData };
 
     return (
         <>
             <Suspense fallback={<Loading/>}>
                 <Await resolve={user} errorElement={<NotFound message='Aucun utilisateur trouvé'/>}>
-                    { (data) => <code>{JSON.stringify(data)}</code> }
+                    { ([ userInfos, ...data ]: UserData) => (
+                        <div className={style.dashboard_container}>
+                            <UserHeader user={userInfos.data} />
+
+                            <Charts data={[ userInfos, ...data ]}/>
+                        </div>
+                    ) }
                 </Await>
             </Suspense>
         </>

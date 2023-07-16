@@ -10,8 +10,8 @@ const USER_MAIN_DATA = [
         keyData: {
             calorieCount: 1930,
             proteinCount: 155,
+            lipidCount: 50,
             carbohydrateCount: 290,
-            lipidCount: 50
         }
     },
     {
@@ -25,8 +25,8 @@ const USER_MAIN_DATA = [
         keyData: {
             calorieCount: 2500,
             proteinCount: 90,
+            lipidCount: 120,
             carbohydrateCount: 150,
-            lipidCount: 120
         }
     }
 ]

@@ -9,7 +9,7 @@ export async function getUsers() {
 }
 
 export async function getOneUser({ params }: LoaderFunctionArgs) {
-    const res = params.id && getOneUserById(params.id);
+    const user = params.id && getOneUserById(params.id);
 
-    return defer({ user: new Promise((resolve) => setTimeout(() => resolve(res), 8500)) });
+    return defer({ user });
 }

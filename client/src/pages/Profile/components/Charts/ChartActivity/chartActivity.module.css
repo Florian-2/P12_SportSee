@@ -1,0 +1,16 @@
+.activity {
+    background-color: var(--color-gray);
+    padding: 2rem 3rem;
+    width: 100%;
+    height: 320px;
+    border-radius: var(--radius);
+    position: relative;
+}
+
+.label {
+    position: absolute;
+    top: 25px;
+    z-index: 10;
+    font-size: 1.6rem;
+    font-weight: 500;
+}

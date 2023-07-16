@@ -8,6 +8,8 @@
 
 :root {
     --color-primary: #FF0101;
+    --color-gray: #FBFBFB;
+    --color-text: #74798C;
     --radius: 5px;
     --transition: 250ms;
 
@@ -28,5 +30,7 @@ a.active {
 }
 
 code {
+    display: block;
     font-size: 2rem;
+    margin-block: 3rem;
 }
