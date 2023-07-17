@@ -4,7 +4,7 @@ import { InfoCard } from './InfoCard/InfoCard';
 import style from './informations.module.css';
 
 
-export function Informations({ user }: { user: User }) {
+export function Informations({ user, className }: { user: User, className: string }) {
     const format = Object.entries(user.keyData);
 
     const renderKeyDataCards = () => {
@@ -14,7 +14,7 @@ export function Informations({ user }: { user: User }) {
 	};
 
     return (
-        <div className={style.container_infos}>
+        <div className={`${style.container_infos} ${className}`}>
             {renderKeyDataCards()}
         </div>
     );

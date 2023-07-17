@@ -21,7 +21,7 @@ function Profile() {
                         <div className={style.dashboard_container}>
                             <UserHeader user={userInfos.data} />
 
-                            <Charts data={[ userInfos, ...data ]}/>
+                            <Charts data={[ userInfos, ...data ]} />
                         </div>
                     ) }
                 </Await>

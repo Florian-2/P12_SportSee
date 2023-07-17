@@ -8,8 +8,8 @@ import style from './chartActivity.module.css';
 
 export function ChartActivity({ data, className }: { data: UserActivity, className?: string }) {
     return (
-        <div className={`${style.activity} ${className}`}>
-            <p className={style.label}>Activité quotidienne</p>
+        <div className={`${style.activity} ${className ? className : ''}`}>
+            <h3 className={style.label}>Activité quotidienne</h3>
 
             <ResponsiveContainer>
                 <BarChart
