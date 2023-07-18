@@ -18,7 +18,7 @@ export function ChartPerformance({ data, className }: { data: UserPerformance, c
 		<div className={`${style.chart_performance} ${className ? className : ''}`}>
 			<ResponsiveContainer width="100%" height="100%">
 				<RadarChart
-                    outerRadius="80%" 
+                    outerRadius="75%" 
                     data={data.data}
                 >
 					<PolarGrid radialLines={false} />

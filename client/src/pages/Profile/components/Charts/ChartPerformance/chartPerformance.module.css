@@ -1,4 +1,5 @@
 .chart_performance {
+    padding: 1rem;
     background-color: #282d30;
     border-radius: var(--radius);
 }
