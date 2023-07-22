@@ -2,11 +2,11 @@ import { createBrowserRouter } from 'react-router-dom';
 import { lazy } from 'react';
 import { getOneUser, getUsers } from './loaders/user.loader';
 
-import App from '../App';
-import Home from '../pages/Home/Home';
-const Construction = lazy(() => import('../pages/Construction/Construction'));
-const Profile = lazy(() => import('../pages/Profile/Profile'));
-const NotFound = lazy(() => import('../components/NotFound/NotFound'));
+import App from '@/App';
+import Home from '@/pages/Home/Home';
+const Construction = lazy(() => import('@/pages/Construction/Construction'));
+const Profile = lazy(() => import('@/pages/Profile/Profile'));
+const NotFound = lazy(() => import('@/components/NotFound/NotFound'));
 
 
 export const router = createBrowserRouter([

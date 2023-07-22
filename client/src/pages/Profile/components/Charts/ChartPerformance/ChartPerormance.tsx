@@ -1,5 +1,5 @@
 import { ResponsiveContainer, RadarChart, PolarGrid, PolarAngleAxis, Radar } from "recharts";
-import { UserPerformance } from "../../../../../interfaces";
+import { UserPerformance } from "@/interfaces";
 
 import style from "./chartPerformance.module.css";
 

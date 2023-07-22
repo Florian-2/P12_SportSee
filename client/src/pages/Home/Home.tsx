@@ -1,10 +1,10 @@
 import { Suspense } from 'react';
 import { Await, useLoaderData } from 'react-router-dom';
 import { UserCard } from './components/UserCard/UserCard';
-import { User } from '../../interfaces';
+import { User } from '@/interfaces';
 
 import style from './home.module.css';
-import { Loading } from '../../components/Loading/Loading';
+import { Loading } from '@/components/Loading/Loading';
 
 
 function Home() {

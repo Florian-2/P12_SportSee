@@ -1,6 +1,6 @@
 import { ResponsiveContainer, LineChart, XAxis, YAxis, Tooltip, Line } from "recharts";
 import { CustomTooltip } from "./CustomTooltip/CustomTooltip";
-import { UserAverageSession } from "../../../../../interfaces";
+import { UserAverageSession } from "@/interfaces";
 
 import style from "./chartSession.module.css";
 

@@ -1,4 +1,4 @@
-import { User } from '../../../../../interfaces';
+import { User } from '@/interfaces';
 import { InfoCard } from './InfoCard/InfoCard';
 
 import style from './informations.module.css';

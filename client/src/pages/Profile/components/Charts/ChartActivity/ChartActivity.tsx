@@ -1,7 +1,7 @@
 import { ResponsiveContainer, BarChart, CartesianGrid, XAxis, YAxis, Bar, Legend, Tooltip } from 'recharts';
 
 import { CustomTooltip } from './CustomTooltip/CustomTooltip';
-import { UserActivity } from '../../../../../interfaces';
+import { UserActivity } from '@/interfaces';
 
 import style from './chartActivity.module.css';
 

@@ -1,7 +1,7 @@
-import IconEnergy from '../../../../../../assets/icons/energy.svg';
-import IconChicken from '../../../../../../assets/icons/chicken.svg';
-import IconBurger from '../../../../../../assets/icons/cheeseburger.svg';
-import IconApple from '../../../../../../assets/icons/apple.svg';
+import IconEnergy from '@/assets/icons/energy.svg';
+import IconChicken from '@/assets/icons/chicken.svg';
+import IconBurger from '@/assets/icons/cheeseburger.svg';
+import IconApple from '@/assets/icons/apple.svg';
 
 import style from './infoCard.module.css';
 

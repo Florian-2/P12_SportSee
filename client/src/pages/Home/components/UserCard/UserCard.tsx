@@ -1,5 +1,5 @@
 import { useOutletContext, useNavigate } from 'react-router-dom';
-import { User, UserContext } from '../../../../interfaces';
+import { User, UserContext } from '@/interfaces';
 
 import style from './userCard.module.css';
 

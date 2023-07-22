@@ -1,11 +1,11 @@
 import { Suspense } from 'react';
 import { Await, useLoaderData } from 'react-router-dom';
-import { UserData } from '../../interfaces';
+import { UserData } from '@/interfaces';
 
-import { Loading } from '../../components/Loading/Loading';
+import { Loading } from '@/components/Loading/Loading';
+import NotFound from '@/components/NotFound/NotFound';
 import { UserHeader } from './components/UserHeader/UserHeader';
 import { Charts } from './components/Charts/Charts';
-import NotFound from '../../components/NotFound/NotFound';
 
 import style from './profile.module.css';
 
