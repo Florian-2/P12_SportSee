@@ -19,32 +19,34 @@ export function ChartScore({ score, className }: { score: string; className?: st
 
 	return (
 		<div className={`${style.chart_score} ${className ? className : ""}`}>
-            <h3 className={style.title}>Score</h3>
+			<h3 className={style.title}>Score</h3>
 
-            <div className={style.container_percentage}>
-                <span className={style.percentage}>{Number(score) * 100}%</span>
-                <span className={style.text}>de votre objectif</span>
-            </div>
+			<div className={style.container_percentage}>
+				<span className={style.percentage}>{Number(score) * 100}%</span>
+				<span className={style.text}>de votre objectif</span>
+			</div>
 
-			<ResponsiveContainer>
-				<RadialBarChart
-					innerRadius="80%"
-					data={data}
-					barSize={10}
-					startAngle={90}
-					endAngle={450}
-                    title="Vote Score"
-				>
-					<RadialBar
-						width="100%"
-						height="100%"
-						background={{ fill: "white" }}
-						cornerRadius={5}
-						max={100}
-						dataKey="value"
-					/>
-				</RadialBarChart>
-			</ResponsiveContainer>
+			<div className={style.chart}>
+				<ResponsiveContainer>
+					<RadialBarChart
+						innerRadius="80%"
+						data={data}
+						barSize={10}
+						startAngle={90}
+						endAngle={450}
+						title="Vote Score"
+					>
+						<RadialBar
+							width="100%"
+							height="100%"
+							background={{ fill: "white" }}
+							cornerRadius={5}
+							max={100}
+							dataKey="value"
+						/>
+					</RadialBarChart>
+				</ResponsiveContainer>
+			</div>
 		</div>
 	);
 }

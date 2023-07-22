@@ -12,13 +12,15 @@ export function Charts({ data }: { data: UserData }) {
     const [ userInfos, userActivity, userAverageSession, userPerformance ] = data;
 
     return (
-        <div className={style.layoutChart}>
-            <ChartActivity data={userActivity.data} className={style.activity}/>
-            <Informations user={userInfos.data} className={style.infos}/>
-
-            <ChartSession data={userAverageSession.data} className={style.sessions}/>
-            <ChartPerformance data={userPerformance.data} className={style.performance}/>
-            <ChartScore score={userInfos.data.score} className={style.score}/>
-        </div>
-    );
+		<>
+			<div className={style.layoutChart}>
+				<ChartActivity data={userActivity.data} className={style.activity} />
+				<Informations user={userInfos.data} className={style.infos} />
+ 
+				<ChartSession data={userAverageSession.data} className={style.sessions} />
+				<ChartPerformance data={userPerformance.data} className={style.performance} />
+				<ChartScore score={userInfos.data.score} className={style.score} />
+			</div>
+		</>
+	);
 }
