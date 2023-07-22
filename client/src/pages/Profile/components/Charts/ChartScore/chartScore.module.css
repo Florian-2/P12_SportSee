@@ -25,7 +25,7 @@
     align-items: center;
 }
 .title {
-    position: absolute;
+    padding: 1.5rem;
     font-size: 1.5rem;
     align-self: start;
 }
