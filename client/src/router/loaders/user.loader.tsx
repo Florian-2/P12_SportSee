@@ -1,15 +1,16 @@
 import { LoaderFunctionArgs, defer } from "react-router-dom";
 import { getAllUsers, getOneUserById } from "../../services/user.service";
 
-
 export async function getUsers() {
-    const users = getAllUsers();
+	const users = getAllUsers();
 
-    return defer({ users });
+	return defer({ users });
 }
 
 export async function getOneUser({ params }: LoaderFunctionArgs) {
-    const user = params.id && getOneUserById(params.id);
+	const user = params.id && getOneUserById(params.id);
 
-    return defer({ user });
+	console.log(user);
+
+	return defer({ user });
 }
