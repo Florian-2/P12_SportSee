@@ -10,7 +10,5 @@ export async function getUsers() {
 export async function getOneUser({ params }: LoaderFunctionArgs) {
 	const user = params.id && getOneUserById(params.id);
 
-	console.log(user);
-
 	return defer({ user });
 }
