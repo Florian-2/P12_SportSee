@@ -1,9 +1,8 @@
 import { ResponsiveContainer, RadialBarChart, RadialBar } from "recharts";
 
-import style from './chartScore.module.css';
+import style from "./chartScore.module.css";
 
-
-export function ChartScore({ score, className }: { score: string; className?: string }) {
+export function ChartScore({ score, className }: { score: number; className?: string }) {
 	const data = [
 		{
 			name: "uncompleted",
@@ -14,7 +13,7 @@ export function ChartScore({ score, className }: { score: string; className?: st
 			name: "completed",
 			value: Number(score) * 100,
 			fill: "#FF0101",
-		}
+		},
 	];
 
 	return (
