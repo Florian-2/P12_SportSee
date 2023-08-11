@@ -11,7 +11,7 @@ export function ChartScore({ score, className }: { score: number; className?: st
 		},
 		{
 			name: "completed",
-			value: Number(score) * 100,
+			value: score * 100,
 			fill: "#FF0101",
 		},
 	];
