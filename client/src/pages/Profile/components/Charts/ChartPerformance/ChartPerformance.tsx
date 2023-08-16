@@ -3,26 +3,21 @@ import { UserPerformance } from "@/interfaces";
 
 import style from "./chartPerformance.module.css";
 
-
 const LABEL: Record<string, string> = {
-    1: "Cardio",
-    2: "Energie",
-    3: "Endurance",
-    4: "Force",
-    5: "Vitesse",
-    6: "Intensité"
-}
+	1: "Cardio",
+	2: "Energie",
+	3: "Endurance",
+	4: "Force",
+	5: "Vitesse",
+	6: "Intensité",
+};
 
-export function ChartPerformance({ data, className }: { data: UserPerformance, className?: string }) {
+export function ChartPerformance({ data, className }: { data: UserPerformance; className?: string }) {
 	return (
-		<div className={`${style.chart_performance} ${className ? className : ''}`}>
-
+		<div className={`${style.chart_performance} ${className ? className : ""}`}>
 			<div className={style.chart}>
-				<ResponsiveContainer >
-					<RadarChart
-						outerRadius="75%" 
-						data={data.data}
-					>
+				<ResponsiveContainer>
+					<RadarChart outerRadius="75%" data={data.data}>
 						<PolarGrid radialLines={false} />
 						<PolarAngleAxis
 							dataKey="kind"
@@ -33,12 +28,7 @@ export function ChartPerformance({ data, className }: { data: UserPerformance, c
 							tickFormatter={(value: number) => LABEL[value]}
 							fontSize={12}
 						/>
-						<Radar
-							name="Performance"
-							dataKey="value"
-							fillOpacity={0.65}
-							fill="#FF0101"
-						/>
+						<Radar name="Performance" dataKey="value" fillOpacity={0.65} fill="#FF0101" />
 					</RadarChart>
 				</ResponsiveContainer>
 			</div>

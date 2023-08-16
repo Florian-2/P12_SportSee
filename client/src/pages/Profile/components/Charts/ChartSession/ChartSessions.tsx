@@ -4,16 +4,15 @@ import { UserAverageSession } from "@/interfaces";
 
 import style from "./chartSession.module.css";
 
+const LABEL = ["L", "M", "M", "J", "V", "S", "D"];
 
-const LABEL = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-
-export function ChartSession({ data, className } : { data: UserAverageSession, className?: string }) {
+export function ChartSession({ data, className }: { data: UserAverageSession; className?: string }) {
 	return (
 		<div className={`${style.chart_sessions} ${className ? className : ""}`}>
 			<h3 className={style.title}>Durée moyenne des sessions</h3>
 
 			<div className={style.chart}>
-				<ResponsiveContainer >
+				<ResponsiveContainer>
 					<LineChart data={data.sessions}>
 						<Line
 							type="natural"

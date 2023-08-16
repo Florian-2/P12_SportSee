@@ -1,6 +1,6 @@
 import { UserData } from "../../../../interfaces";
 import { ChartActivity } from "./ChartActivity/ChartActivity";
-import { ChartPerformance } from "./ChartPerformance/ChartPerormance";
+import { ChartPerformance } from "./ChartPerformance/ChartPerformance";
 import { ChartScore } from "./ChartScore/CharScore";
 import { ChartSession } from "./ChartSession/ChartSessions";
 import { Informations } from "./Informations/Informations";

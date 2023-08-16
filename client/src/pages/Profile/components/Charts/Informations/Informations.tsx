@@ -5,7 +5,6 @@ import style from "./informations.module.css";
 
 export function Informations({ user, className }: { user: User; className: string }) {
 	const format = Object.entries(user.keyData);
-	console.log(format);
 
 	return (
 		<div className={`${style.container_infos} ${className}`}>
