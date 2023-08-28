@@ -4,10 +4,8 @@ import { UserData } from "@/interfaces";
 
 import { Loading } from "@/components/Loading/Loading";
 import NotFound from "@/components/NotFound/NotFound";
-import { UserHeader } from "./components/UserHeader/UserHeader";
-import { Charts } from "./components/Charts/Charts";
 
-import style from "./profile.module.css";
+import { Content } from "./components/Content";
 
 function Profile() {
 	const { user } = useLoaderData() as { user: UserData };
@@ -16,13 +14,7 @@ function Profile() {
 		<>
 			<Suspense fallback={<Loading />}>
 				<Await resolve={user} errorElement={<NotFound message="Aucun utilisateur trouvé" />}>
-					{([userInfos, ...data]: UserData) => (
-						<div className={style.dashboard_container}>
-							<UserHeader user={userInfos.data} />
-
-							<Charts data={[userInfos, ...data]} />
-						</div>
-					)}
+					{(data: UserData) => <Content data={data} />}
 				</Await>
 			</Suspense>
 		</>

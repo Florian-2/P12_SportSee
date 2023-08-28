@@ -15,32 +15,22 @@ export interface User {
 }
 
 export interface UserActivity {
-	userId: number;
-	sessions: {
-		day: string;
-		kilogram: number;
-		calories: number;
-	}[];
+	day: string;
+	kilogram: number;
+	calories: number;
 }
 
 export interface UserAverageSession {
-	userId: number;
-	sessions: {
-		day: number;
-		sessionLength: number;
-	}[];
+	day: number;
+	sessionLength: number;
 }
 
+export interface UserAverageSessionFormat {
+	day: string;
+	sessionLength: number;
+}
 export interface UserPerformance {
-	userId: number;
-	kind: {
-		1: "cardio";
-		2: "energy";
-		3: "endurance";
-		4: "strength";
-		5: "speed";
-		6: "intensity";
-	};
+	kind: string[];
 	data: {
 		value: number;
 		kind: number;
@@ -49,9 +39,14 @@ export interface UserPerformance {
 
 export type UserContext = [activeUserId: number, setActiveUserId: React.Dispatch<React.SetStateAction<number>>];
 
-export type UserData = [
-	{ data: User },
-	{ data: UserActivity },
-	{ data: UserAverageSession },
-	{ data: UserPerformance }
-];
+export type UserDataFormat = {
+	mainData: User;
+	activity: UserActivity[];
+	averageSessions: UserAverageSessionFormat[];
+	performances: UserPerformance;
+};
+
+export type Activity = { sessions: UserActivity[] };
+export type AverageSessions = { sessions: UserAverageSession[] };
+
+export type UserData = [{ data: User }, { data: Activity }, { data: AverageSessions }, { data: UserPerformance }];
